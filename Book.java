@@ -3,10 +3,10 @@
  * This might form part of a larger application such
  * as a library system, for instance.
  *
- * @author (Insert your name here.)
- * @version (Insert today's date here.)
+ * @author (Henry Petrillo)
+ * @version (9/10/2024)
  */
-class Book
+public class Book
 {
     // The fields.
     private String author;
@@ -16,11 +16,20 @@ class Book
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle)
-    {
+    public Book(String bookAuthor, String bookTitle) {
         author = bookAuthor;
         title = bookTitle;
     }
 
     // Add the methods here ...
+    /**
+     * Get the author and title fields when this object is called.
+     */
+    
+    public String getTitle() {
+        return title;
+    }
+    public String getAuthor() {
+        return author;
+    }
 }
