@@ -62,5 +62,10 @@ public class Book
         System.out.println("Author: " + author);
         System.out.println("Title: " + title);
         System.out.println("Pages: " + pages);
+        if (refNumber.length() == 0) {
+            System.out.println("ZZZ");
+        } else {
+            System.out.println("Reference Number: " + refNumber);
+        }
     }
 }
