@@ -13,22 +13,28 @@ public class Book
     private String title;
     private int pages;
     private String refNumber = "";
+    private int borrowed;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int totalPages) {
+    public Book(String bookAuthor, String bookTitle, int totalPages, int borrow) {
         author = bookAuthor;
         title = bookTitle;
         pages = totalPages;
+        borrowed = borrow
     }
     /**
      * Set the reference Number field when this object
      * is constructed.
      */
     public void setRefNumber(String ref) {
-        refNumber = ref;
+        if (ref.length() >= 3) {
+            refNumber = ref;
+        } else {
+            System.out.println("There is an error. No change made.");
+        }
     }
 
     // Add the methods here ...
@@ -49,6 +55,9 @@ public class Book
     public String getRefNumber() {
         return refNumber;
     }
+    public int getBorrowed() {
+        return borrow;
+    }
     /**
      * Methods used to print the author and title to terminal.
      */
@@ -67,5 +76,9 @@ public class Book
         } else {
             System.out.println("Reference Number: " + refNumber);
         }
+        System.out.println(borrowed);
+    }
+    public void borrow() {
+        borrowed += 1;
     }
 }
