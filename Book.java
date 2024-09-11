@@ -32,4 +32,14 @@ public class Book
     public String getAuthor() {
         return author;
     }
+    /**
+     * Methods used to print the author and title to terminal.
+     */
+    public void printTitle() {
+        System.out.println(title);
+    }
+    public void printAuthor() {
+        System.out.println(author);
+    }
+    
 }
